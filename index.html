@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link href="./src/output.css" rel="stylesheet">
+
+    <style>
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    </style>
+
+</head>
+<body onload="redirectToMain()">
+<div id="app" class='flex space-x-2 justify-center items-center bg-white h-screen'>
+  	<div class='h-6 w-6 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+	<div class='h-6 w-6 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.15s]'></div>
+	<div class='h-6 w-6 bg-sky-500 rounded-full animate-bounce'></div>
+</div>
+
+    <script>
+        function redirectToMain() {
+            const app = document.getElementById('app');
+      
+            setTimeout(() => {
+                app.classList.add('fade-out');
+
+            setTimeout(() => {
+                window.location.href = "landingPage.html";
+                }, 800);
+            }, 1500); 
+        }
+    </script>
+</body>
+</html>

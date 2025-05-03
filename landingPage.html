@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- css sources -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  
+  <link href="./src/output.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- HEADER START -->
+    <header class="absolute h-18 lg:h-20 z-50 p-5 w-full text-sky-600 backdrop-blur-sm"
+        data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <!-- header container -->
+        <div class="container mx-auto px-8 md:px-12">
+            <!-- header flexbox -->
+            <div class="flex justify-between items-center relative">
+                <!-- header logo -->
+                <div class="my-auto">
+                    <a href="#beranda" onclick="moveToBeranda()" class="text-2xl lg:text-3xl font-semibold">Konoha.</a>
+                </div>
+                <!-- hamburger menu -->
+                <div class="flex items-center px-4 lg:px-0 lg:w-72">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute lg:hidden">
+                        <span class="hamburger-menu origin-top-left transition-all ease-in-out duration-500"></span>
+                        <span class="hamburger-menu transition-all ease-in-out duration-300"></span>
+                        <span class="hamburger-menu origin-bottom-left transition-all ease-in-out duration-500"></span>
+                    </button>
+                </div>
+                <!-- navigation menu hamburger -->
+                <nav id="nav-menu" class="hidden lg:hidden absolute bg-white/90 bg-cover shadow-2xl 
+                    w-70 top-16 p-10 rounded-2xl -right-[8%] "> 
+                    <ul class="flex flex-col gap-8 font-medium text-lg">
+                        <li class="group">
+                            <a href="#pengaduan" onclick="moveToPengaduan()" 
+                                class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Pengaduan</a>
+                        </li>
+                        <li class="group">
+                            <a href="#berita" onclick="moveToBerita()" 
+                                class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Berita</a>
+                        </li>
+                        <li class="group">
+                            <a href="#profil" onclick="moveToProfil()" class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Profil</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Aset</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Keuangan</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-medium hover:text-sky-500 hover:transition-all 
+                                hover:duration-500 not-hover:duration-500">Demografi</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- navigation menu bar -->
+                <nav class="hidden lg:block lg:static lg:py-2"> 
+                    <ul class="flex flex-row gap-10 font-medium text-xl">
+                        <li class="group">
+                            <a href="#pengaduan" onclick="moveToPengaduan()" 
+                                class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Pengaduan</a>
+                        </li>
+                        <li class="group">
+                            <a href="#berita" onclick="moveToBerita()" 
+                                class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Berita</a>
+                        </li>
+                        <li class="group">
+                            <a href="#profil" onclick="moveToProfil()" class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Profil</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Aset</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Keuangan</a>
+                        </li>
+                        <li class="group">
+                            <a href="" class="text-slate-700 font-normal hover:text-sky-400 text-shadow-lg/10 
+                                text-shadow-slate-600 hover:transition-all hover:duration-500 not-hover:duration-500">Demografi</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END-->
+
+    <!-- SECTION : HERO START -->
+    <section id="beranda">
+        <!-- hero background image -->
+        <div class="bg-[url(/img/konoha.jpg)] bottom-24 bg-cover h-[40rem] lg:h-[44rem] xl:h-[54rem] bg-bottom bg-no-repeat">
+            <!-- hero container -->
+            <div class="container mx-auto pb-44 px-10">
+                <!-- text container -->
+                <div class="pt-[21rem]">
+                    <div class="">
+                        <h1 class="
+                            text-center text-2xl lg:text-4xl xl:text-5xl font-semibold text-white 
+                            text-shadow text-shadow-md/60 text-shadow-black"
+                            data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                            Selamat Datang di Desa Konoha!</h1>
+                    </div>
+                    <div class="px-[10%] md:px-[15%] xl:px-[25%] mt-5 lg:mt-10">
+                        <h2 class="text-center text-sm lg:text-2xl font-semibold text-white 
+                            text-shadow text-shadow-md/60 text-shadow-black"
+                            data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                            laman pengaduan masyarakat serta informasi dan berita terkini seputar Desa Konoha!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- vector -->
+        <svg style="margin-top:-18%; width:100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="100" d="M0,192L120,208C240,224,480,256,720,256C960,256,
+                1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,
+                240,320,120,320L0,320Z"></path>
+        </svg>
+    </section>
+    <!-- SECTION : HERO END -->
+
+    <!-- SECTION : PENGADUAN START -->
+    <section id="pengaduan">
+        <!-- pengaduan container -->
+        <div class="container mx-auto mb-24 lg:mb-40 px-10">
+            <!-- pengaduan flexbox -->
+            <div class="flex flex-col justify-center">
+                <!-- element container -->
+                    <div>
+                        <h1 class="pt-14 pb-10 lg:pb-14 text-center text-xl lg:text-3xl font-medium text-sky-500">Adukan Keluhanmu!</h1>
+                    </div>
+
+                    <form action="" method="post" class="mx-[3%] lg:mx-24 xl:mx-34">
+                        <!-- input : nama -->
+                        <div class="box input-animate mb-3 lg:mb-5" 
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="0" data-aos-delay="0">
+                            <label for="nama" id="nama-label" 
+                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Nama</label>
+                            <input type="text" id="nama" class="w-full h-9 px-6 mt-2 border-slate-300 text-sm 
+                                border-2 rounded-xl focus:outline-none focus:border-sky-500 input-lg">
+                        </div>
+                        <!-- input : nomor telepon -->
+                        <div class="input-animate mb-3 lg:mb-5"
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="100" data-aos-delay="100">
+                            <label for="nomor" id="nomor-label" 
+                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Nomor Telepon</label>
+                            <input type="text" id="nomor" onkeypress="return onlyNumeric(event)" 
+                                class="w-full h-9 px-6 mt-2 border-slate-300 text-sm border-2 rounded-xl 
+                                focus:outline-none focus:border-sky-500 input-lg">
+                        </div>
+                        <!-- input : kategori pengaduan -->
+                        <div id="input-animate dropdown-button" class="mb-3 lg:mb-5 relative"
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="200" data-aos-delay="200">
+                            <label for="kategori" id="kategori-label" 
+                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Kategori Pengaduan</label>
+                            <!-- dropdown -->
+                            <div>
+                                <div id="dropdown" class="w-full h-9 px-6 mt-2 flex justify-between items-center 
+                                border-slate-300 border-2 rounded-xl click:border-sky-500 input-lg">
+                                    <h2 id="selected" class="text-slate-400 text-sm lg:text-base font-base">Pilih Kategori</h2>
+                                    <i id="icon-dropdown" class="fa-solid fa-caret-down fa-xl text-slate-700"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- dropdown selection -->
+                            <div id="dropdown-show" class="hidden absolute w-full mt-3 px-10 py-6 z-50 bg-white border-2 
+                                border-slate-300 rounded-xl">
+                                <div class="flex flex-col gap-6 lg:gap-5">
+                                    <div onclick="category('Umum')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Umum
+                                    </div>
+                                    <div onclick="category('Sosial')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Sosial
+                                    </div>
+                                    <div onclick="category('Keamanan')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Keamanan
+                                    </div>
+                                    <div onclick="category('Kesehatan')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Kesehatan
+                                    </div>
+                                    <div onclick="category('Kebersihan')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Kebersihan
+                                    </div>
+                                    <div onclick="category('Fasilitas Umum')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Fasilitas Umum
+                                    </div>
+                                    <div onclick="category('Permintaan')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Permintaan
+                                    </div>
+                                    <div onclick="category('Pendidikan')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Pendidikan
+                                    </div>
+                                    <div onclick="category('Lainya')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
+                                        hover:text-sky-500 hover:transition-all hover:duration-500 not-hover:duration-500">Lainya
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- input : Pengaduan -->
+                        <div class="input-animate mb-2 lg:mb-4"
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="200" data-aos-delay="300">
+                            <label for="nama" id="nama-label" 
+                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Pengaduan</label>
+                            <textarea id="pengaduan" class="w-full h-52 lg:60 px-6 py-4 mt-2 border-slate-300 text-sm lg:text-base
+                                border-2 rounded-xl focus:outline-none focus:border-sky-500 resize-none"></textarea>
+                        </div>
+                        <!-- input : lampiran -->
+                        <div class="input-animate mb-3 lg:mb-5"
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="200" data-aos-delay="400">
+                            <label class="mx-4 text-sm font-medium text-slate-700 label-lg">Lampiran</label>
+
+                            <div class="relative mt-2 w-full">
+                                <input type="file" id="lampiran" class="absolute px-6 py-[0.5rem] h-full w-full text-sm lg:text-base 
+                                    text-slate-400 cursor-pointer active:border-2 active:border-sky-500 active:rounded-xl"/>    
+                                <div class="h-9 lg:h-10 flex items-center justify-end border-2 border-slate-300 rounded-xl px-6 py-2">
+                                    <i class="fa-regular fa-file fa-md"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- submit button -->
+                        <div class="input-animate my-8"
+                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                            data-aos-once="true" data-aos-offset="100" data-aos-delay="500">
+                            <button type="submit" class="w-full h-9 px-6 mt-2 bg-sky-500 text-white text-sm rounded-xl 
+                                hover:bg-sky-600 hover:transition-all hover:duration-500 not-hover:duration-500 input-lg">
+                                Kirim Aduanmu!
+                            </button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION : PENGADUAN END -->
+
+    <!-- SECTION : BERITA START -->
+    <section id="berita">
+        <!-- berita bacgkground -->
+        <div class="bg-sky-100 pb-24">
+            <div>
+                <h1 class="pt-18 lg:pt-28 pb-10 lg:pb-14 text-center text-xl lg:text-3xl font-medium text-slate-700">
+                    Berita dan Informasi</h1>
+            </div>
+            <!-- berita swiper container -->
+            <div class="swiper container mx-auto px-4 mb-8" 
+                data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" 
+                data-aos-once="false" data-aos-offset="200" data-aos-delay="0">     
+                <div class="swiper-wrapper mb-1">
+                    <!-- slide 1 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/berita.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/berita.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/berita.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 4 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="">
+                                    <!-- source image -->
+                                    <img src="img/berita.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>     
+            </div>
+            <!-- informasi swiper container -->
+            <div class="swiper container mx-auto px-4"
+                data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" 
+                data-aos-once="false" data-aos-offset="200" data-aos-delay="300">     
+                <div class="swiper-wrapper mb-1">
+                    <!-- slide 1 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/informasi.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/informasi.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/informasi.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                    <!-- slide 4 -->
+                    <div class="swiper-slide ">
+                        <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
+                            <a href="">
+                                <div class="overflow-hidden">
+                                    <!-- source image -->
+                                    <img src="img/informasi.png" class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out">
+                                </div>
+                                <div class="mt-2 px-4 pb-4">
+                                    <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
+                                    <h3 class="text-sm text-gray-600">
+                                        <i class="fa-regular fa-clock"></i><span class="mx-1"></span>12 April 2021
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>     
+            </div>
+        </div>
+    </section>
+    <!-- SECTION : BERITA END -->
+
+    <!-- bg init for profil and foooter -->
+    <section class="bg-[url(/img/bg-profil.png)] w-full bg-cover bg-fixed">
+
+        <!-- SECTION : PROFIL START -->
+        <section id="profil">
+            <div>
+                <div class="container mx-auto mb-28">
+                    <div class="">
+                        <div class="pt-18 lg:pt-36 pb-14 lg:pb-24 text-center">
+                            <h1 class="text-sky-500 font-medium text-xl lg:text-3xl" >Pofil Desa Konoha</h1>
+                        </div>
+
+                        <div class="lg:flex lg:flex-row lg:gap-10">
+                            <div class="group overflow-hidden lg:w-1/2 mb-12 mx-12 lg:mx-0 md:mx-16 lg:ml-32 xl:ml-40 
+                                rounded-xl hover:scale-95 transition-all duration-500 ease-in-out"
+                                data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-out" 
+                                data-aos-once="false" data-aos-offset="200" data-aos-delay="0">
+
+                                <img src="img/profil.png" class="mx-auto w-full object-cover rounded-xl hover:scale-110 transition-all duration-500 ease-in-out">
+                            </div>
+                            <div class="lg:w-1/2 mx-12 lg:mx-0 md:mx-16 lg:mr-32 xl:mr-40"
+                                data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-in-out" 
+                                data-aos-once="false" data-aos-offset="200" data-aos-delay="200">
+                                <p class="text-sm lg:text-base xl:text-lg font-medium text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dignissimos, rem nostrum 
+                                    illo reprehenderit optio repellat neque assumenda fugit amet unde itaque? Delectus non vero 
+                                    doloremque aperiam amet quis maiores vel minima! Consectetur, voluptatem voluptatum minima 
+                                    laboriosam officiis eaque tempora, cum non cupiditate illum, numquam harum animi quod! Minima, 
+                                    praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reiciendis tempora
+                                    minima? Est hic perspiciatis ipsam ad dicta minus accusamus!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : PROFIL END -->
+
+        <!-- FOOTER START -->
+        <footer>
+            <div class="container mx-auto md:px-4 lg:px-8 xl:px-20 bg-sky-500 w-[78%] md:w-[82%] lg:w-[76%] xl:w-[64%]
+                pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl"
+                data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-out" 
+                data-aos-once="false" data-aos-offset="200" data-aos-delay="100">
+                <!-- flex while display md -->
+                <div class="md:flex md:flex-row">
+                    <!-- flex between addreess and contact -->
+                    <div class="flex flex-col md:w-[70%] lg:w-[55%] xl:w-[70%]">
+                        <!-- Address -->
+                        <div class="flex mx-6 pt-6 mb-4">
+                            <div class="w-[60%] md:w-[50%] lg:w-[40%] xl:w-[25%] xl:mr-8 mr-4 mt-2">
+                                <img src="img/logo.jpeg" class="rounded-full">
+                            </div>
+                            <div class="flex flex-col">
+                                <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-1">Pemerintah Desa Konoha</h2>
+                                <p class="xl:w-[70%] font-light xl:font-normal text-xs lg:text-base text-white">Jl. Perdamaian 3 No.666, Desa Konoha, 
+                                    Kecamatan Fracture, Kabupaten Ascent, Provinsi Icebox</p>
+                            </div>
+                        </div>
+                        <!-- Contact -->
+                        <div class="mx-6 pt-5 mb-4">
+                            <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-4">Hubungi Kami</h2>
+                            <div class="flex flex-row items-center gap-3 ml-2 mb-4">
+                                <i class="fa-solid fa-phone text-white text-sm lg:text-base xl:text-xl"></i>
+                                <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">+62 8966677788</h3>
+                            </div>
+                            <div class="flex flex-row items-center gap-3 ml-2 mb-6">
+                                <i class="fa-solid fa-envelope text-white text-sm lg:text-base xl:text-xl"></i>
+                                <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">konoha@konoha.com</h3>
+                            </div>
+                            <div class="flex flex-row items-center gap-3 lg:gap-5 ml-2">
+                                <a href="">
+                                    <img src="icon/instagram.svg" class="w-8 lg:w-12">
+                                </a>
+                                <a href="">
+                                    <img src="icon/youtube.svg" class="w-8 lg:w-12">
+                                </a>
+                                <a href="">
+                                    <img src="icon/x.svg" class="w-8 lg:w-12">
+                                </a>
+                                <a href="">
+                                    <img src="icon/facebook.svg" class="w-8 lg:w-12">
+                                </a>
+                                <a href="">
+                                    <img src="icon/tiktok.svg" class="w-8 lg:w-12">
+                                </a>
+                            </div>
+                        </div>
+                    </div>   
+                    <!-- Menu -->
+                    <div class="mx-6 pt-5 mb-4 md:w-[30%] lg:w-[35%] xl:2-[30%]">
+                        <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-3 lg:mb-5">Menu Utama</h2>
+                        <div class="flex flex-col gap-4 text-white font-light xl:font-normal text-xs lg:text-base ml-2">
+                            <li>
+                                <a href="#beranda" onclick="moveToBeranda()">Beranda</a>
+                            </li>
+                            <li>
+                                <a href="#pengaduan" onclick="moveToPengaduan()">Pengaduan</a>
+                            </li>
+                            <li>
+                                <a href="#berita" onclick="moveToBerita()">Berita dan Informasi</a>
+                            </li>
+                            <li>
+                                <a href="#profil" onclick="moveToProfil()">Profil Desa Konoha</a>
+                            </li>
+                            <li>
+                                <a href="">Aset</a>
+                            </li>
+                            <li>
+                                <a href="">Keuangan</a>
+                            </li>
+                            <li>
+                                <a href="">Demorafi</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="pt-3 lg:pt-5 pb-4 lg:bt-5">
+                <h4 class="text-slate-700 text-xs lg:text-base text-center font-light">copyright 2025 Pemerintah Desa Konoha</h4>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+    </section>
+
+    <!-- javascrip sources -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/9b8f32c598.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
