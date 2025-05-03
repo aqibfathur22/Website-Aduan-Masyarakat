@@ -166,13 +166,12 @@
                                 focus:outline-none focus:border-sky-500 input-lg">
                         </div>
                         <!-- input : kategori pengaduan -->
-                        <div id="input-animate dropdown-button" class="mb-3 lg:mb-5 relative"
-                            data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
-                            data-aos-once="true" data-aos-offset="200" data-aos-delay="200">
-                            <label for="kategori" id="kategori-label" 
-                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Kategori Pengaduan</label>
+                        <div id="input-animate dropdown-button" class="mb-3 lg:mb-5 relative">   
                             <!-- dropdown -->
-                            <div>
+                            <div data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out" 
+                                data-aos-once="true" data-aos-offset="300" data-aos-delay="200">
+                                <label for="kategori" id="kategori-label" 
+                                class="mx-4 text-sm font-medium text-slate-700 label-lg">Kategori Pengaduan</label>
                                 <div id="dropdown" class="w-full h-9 px-6 mt-2 flex justify-between items-center 
                                 border-slate-300 border-2 rounded-xl click:border-sky-500 input-lg">
                                     <h2 id="selected" class="text-slate-400 text-sm lg:text-base font-base">Pilih Kategori</h2>
@@ -181,7 +180,7 @@
                             </div>
                             
                             <!-- dropdown selection -->
-                            <div id="dropdown-show" class="hidden absolute w-full mt-3 px-10 py-6 z-50 bg-white border-2 
+                            <div id="dropdown-show" class="hidden absolute bg-white w-full mt-3 px-10 py-6 z-50 border-2 
                                 border-slate-300 rounded-xl">
                                 <div class="flex flex-col gap-6 lg:gap-5">
                                     <div onclick="category('Umum')" class="text-sm lg:text-base font-medium text-slate-700 cursor-pointer 
