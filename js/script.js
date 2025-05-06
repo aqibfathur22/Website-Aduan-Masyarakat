@@ -141,7 +141,7 @@ function moveToPengaduan() {
 
     const target = document.querySelector('#pengaduan');
     window.scrollTo({
-        top: target.offsetTop - 60,
+        top: target.offsetTop,
         behavior: 'smooth',
     });
 
@@ -158,7 +158,7 @@ function moveToBerita() {
 
     const target = document.querySelector('#berita');
     window.scrollTo({
-        top: target.offsetTop - 50,
+        top: target.offsetTop - 30,
         behavior: 'smooth',
     });
 
@@ -175,7 +175,7 @@ function moveToProfil() {
 
     const target = document.querySelector('#profil');
     window.scrollTo({
-        top: target.offsetTop - 50,
+        top: target.offsetTop - 30,
         behavior: 'smooth',
     });
 

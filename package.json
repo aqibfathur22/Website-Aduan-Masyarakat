@@ -1,11 +1,12 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.4",
+    "wow.js": "^1.2.2"
   },
-
   "scripts": {
-    "dev" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   }
 }
