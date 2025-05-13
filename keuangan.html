@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <link href="./src/output.css" rel="stylesheet" />
+    </head>
+    <body class="fade-in">
+        <!-- HEADER START -->
+        <header
+            class="absolute h-18 lg:h-20 z-50 py-5 w-full text-sky-600 bg-white/20 backdrop-blur-sm duration-700 ease-in-out wow animate__animated animate__fadeInDown"
+            data-wow-duration="1.5s">
+            <!-- header container -->
+            <div class="container mx-auto px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                <!-- header flexbox -->
+                <div class="flex justify-between items-center relative">
+                    <!-- header logo -->
+                    <div class="my-auto">
+                        <a href="#beranda" onclick="moveToBeranda()" class="text-2xl lg:text-3xl font-semibold">Konoha.</a>
+                    </div>
+                    <!-- hamburger menu -->
+                    <div class="flex items-center lg:w-72">
+                        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                            <span class="hamburger-menu origin-top-left transition-all ease-in-out duration-500"></span>
+                            <span class="hamburger-menu transition-all ease-in-out duration-300"></span>
+                            <span class="hamburger-menu origin-bottom-left transition-all ease-in-out duration-500"></span>
+                        </button>
+                    </div>
+                    <!-- navigation menu hamburger -->
+                    <nav
+                        id="nav-menu"
+                        class="hidden lg:hidden absolute bg-white/90 bg-cover shadow-2xl w-70 top-16 p-10 rounded-2xl -right-[8%]">
+                        <ul class="flex flex-col gap-8 font-medium text-lg">
+                            <li class="group">
+                                <a href="#pengaduan" onclick="moveToPengaduan()" class="nav-hamburger-style">Pengaduan</a>
+                            </li>
+                            <li class="group">
+                                <a href="#berita" onclick="moveToBerita()" class="nav-hamburger-style">Berita</a>
+                            </li>
+                            <li class="group">
+                                <a href="#profil" onclick="moveToProfil()" class="nav-hamburger-style">Profil</a>
+                            </li>
+                            <li class="group">
+                                <a href="keuangan.html" class="nav-hamburger-style">Keuangan</a>
+                            </li>
+                            <li class="group">
+                                <a href="" class="nav-hamburger-style">Demografi</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- navigation menu bar -->
+                    <nav class="hidden lg:block lg:static lg:py-2">
+                        <ul class="flex flex-row gap-10 font-medium text-lg">
+                            <li class="group">
+                                <a href="#pengaduan" onclick="moveToPengaduan()" class="nav-bar-style">Pengaduan</a>
+                            </li>
+                            <li class="group">
+                                <a href="#berita" onclick="moveToBerita()" class="nav-bar-style">Berita</a>
+                            </li>
+                            <li class="group">
+                                <a href="#profil" onclick="moveToProfil()" class="nav-bar-style">Profil</a>
+                            </li>
+                            <li class="group">
+                                <a href="" class="nav-bar-style">Keuangan</a>
+                            </li>
+                            <li class="group">
+                                <a href="" class="nav-bar-style">Demografi</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+
+        <!-- SECTION : HERO START -->
+        <section>
+            <!-- hero background -->
+            <div class="bg-white">
+                <!-- hero container -->
+                <div class="container mx-auto px-2 pt-12 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div>
+                        <h1 class="text-center section-title text-sky-500">Keuangan Desa Konoha</h1>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-6 lg:justify-center">
+                        <div
+                            class="container my-auto mx-auto lg:mx-0 lg:block max-w-xs md:max-w-sm lg:max-w- xl:max-w-xl wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1.5s">
+                            <img src="img/grafik.png" class="object-contain w-full opacity-75" />
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-6 px-6 lg:px-14 py-8 lg:py-10 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full lg:max-w-lg xl:max-w-2xl wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1.5s"
+                            data-wow-delay="400ms">
+                            <div class="mb-2">
+                                <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Keuangan Desa Konoha Tahun 2025</h3>
+                            </div>
+                            <!-- income -->
+                            <div class="flex gap-4 justify-center">
+                                <!-- income icon -->
+                                <div class="hidden md:block">
+                                    <img src="icon/up.svg" class="w-[80%] xl:w-[90%] pt-2" />
+                                </div>
+                                <!-- income grid -->
+                                <div class="grid grid-cols-2 gap-6 md:gap-8 xl:gap-14">
+                                    <div class="w-40 xl:w-44 flex flex-col gap-2">
+                                        <h5 class="text-slate-700 text-sm xl:text-base">Pemasukan Desa</h5>
+                                        <h5 class="text-sky-500 text-base xl:text-lg font-medium">Rp. 52.230.492.666</h5>
+                                    </div>
+                                    <div class="w-40 xl:w-44 flex flex-col gap-2">
+                                        <h5 class="text-slate-700 text-sm xl:text-base">Anggaran Masuk</h5>
+                                        <h5 class="text-sky-500 text-base xl:text-lg font-medium">Rp. 12.230.492.666</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- outcome -->
+                            <div class="flex gap-4 justify-center">
+                                <!-- outcome icon -->
+                                <div class="hidden md:block">
+                                    <img src="icon/down.svg" class="w-[80%] xl:w-[90%] pt-2" />
+                                </div>
+                                <!-- outcome grid -->
+                                <div class="grid grid-cols-2 gap-6 md:gap-8 xl:gap-14">
+                                    <div class="w-40 xl:w-44 flex flex-col gap-2">
+                                        <h5 class="text-slate-700 text-sm xl:text-base">Pengeluaran Desa</h5>
+                                        <h5 class="text-red-500 text-base xl:text-lg font-medium">Rp. 52.230.492.666</h5>
+                                    </div>
+                                    <div class="w-40 xl:w-44 flex flex-col gap-2">
+                                        <h5 class="text-slate-700 text-sm xl:text-base">Anggaran Keluar</h5>
+                                        <h5 class="text-red-500 text-base xl:text-lg font-medium">Rp. 12.230.492.666</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- surplus/defisit -->
+                            <div class="flex gap-[6.5rem] lg:gap-15 justify-center">
+                                <!-- outcome fake box -->
+                                <div class="hidden md:block"></div>
+                                <div class="flex flex-col gap-4">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <h3 class="text-slate-700 font-semibold text-sm lg:text-base">Surplus / Defisit</h3>
+                                    </div>
+                                    <!-- outcome grid -->
+                                    <div class="grid grid-cols-2 gap-6 md:gap-4 lg:gap-8 xl:gap-14">
+                                        <div class="w-44 flex flex-col gap-2">
+                                            <h5 class="text-slate-700 text-sm xl:text-base">Pengeluaran Desa</h5>
+                                            <h5 class="text-sky-500 text-base xl:text-lg font-medium">+ Rp. 52.230.492.666</h5>
+                                        </div>
+                                        <div class="w-44 flex flex-col gap-2">
+                                            <h5 class="text-slate-700 text-sm xl:text-base">Dana Mandiri</h5>
+                                            <h5 class="text-slate-700 text-base xl:text-lg font-medium">Rp. 0</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end gap-4">
+                                <h5 class="text-sm text-slate-400">2025</h5>
+                                <i id="icon-dropdown" class="fa-solid fa-caret-down fa-xl pt-2 pr-2.5 text-slate-400" required></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : HERO END -->
+
+        <!-- SECTION : PENDAPATAN DESA START -->
+        <section>
+            <!-- pendapatan background -->
+            <div class="bg-white">
+                <!-- chart container -->
+                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-10 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div
+                        class="flex flex-col gap-10 px-6 lg:px-20 py-8 lg:py-14 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-offset="300"
+                        data-wow-delay="100ms">
+                        <div>
+                            <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Pendapatan Desa Konoha Tahun 2025</h3>
+                        </div>
+                        <div>
+                            <canvas id="pendapatanChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : PENDAPATAN DESA END -->
+
+        <!-- SECTION : ANGGARAN DESA START -->
+        <section>
+            <!-- chart background -->
+            <div class="bg-white">
+                <!-- chart container -->
+                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-8 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div
+                        class="flex flex-col gap-10 px-6 lg:px-20 py-8 lg:py-14 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-offset="200"
+                        data-wow-delay="100ms">
+                        <div>
+                            <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Anggaran Desa Konoha Tahun 2025</h3>
+                        </div>
+                        <div>
+                            <canvas id="anggaranChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : ANGGARAN DESA END -->
+
+        <!-- SECTION : ALOKASI START -->
+        <section>
+            <!-- alokasi background -->
+            <div class="bg-white">
+                <!-- alokasi container -->
+                <div class="bg-white">
+                    <!-- alokasi container -->
+                    <div class="container mx-auto mb-8 lg:mb-12 px-2 pt-8 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                        <!-- alokasi box -->
+                        <div
+                            class="flex flex-col gap-8 px-6 lg:px-20 py-8 lg:py-18 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-[60vh] lg:h-full wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1.5s"
+                            data-wow-offset="200"
+                            data-wow-delay="100ms">
+                            <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Alokasi Dana Desa Konoha Tahun 2025</h3>
+                            <div class="flex-1 overflow-y-auto p-1">
+                                <table class="min-w-lg md:min-w-2xl rounded-lg ring-1 ring-slate-300 overflow-hidden w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <td class="px-6 py-3 text-sm xl:text-base font-medium text-gray-700 text-center w-[9%]">No</td>
+                                            <td class="header-table w-[20%]">Tanggal</td>
+                                            <td class="header-table">Rincian</td>
+                                            <td class="header-table w-[28%]">Alokasi</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-300">
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">1</td>
+                                            <td class="text-table w-[20%]">14-01-2025</td>
+                                            <td class="text-table">Penyelenggaraan pemerintah desa</td>
+                                            <td class="text-table w-[28%]">Rp. 4.000.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">2</td>
+                                            <td class="text-table w-[20%]">20-02-2025</td>
+                                            <td class="text-table">Pembangunan infrastruktur desa</td>
+                                            <td class="text-table w-[28%]">Rp. 6.500.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">3</td>
+                                            <td class="text-table w-[20%]">05-03-2025</td>
+                                            <td class="text-table">Pengadaan alat kesehatan</td>
+                                            <td class="text-table w-[28%]">Rp. 2.000.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">4</td>
+                                            <td class="text-table w-[20%]">18-04-2025</td>
+                                            <td class="text-table">Pelatihan keterampilan warga</td>
+                                            <td class="text-table w-[28%]">Rp. 1.200.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">5</td>
+                                            <td class="text-table w-[20%]">10-05-2025</td>
+                                            <td class="text-table">Pengelolaan kebersihan lingkungan</td>
+                                            <td class="text-table w-[28%]">Rp. 800.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">6</td>
+                                            <td class="text-table w-[20%]">25-06-2025</td>
+                                            <td class="text-table">Pengadaan fasilitas pendidikan</td>
+                                            <td class="text-table w-[28%]">Rp. 3.500.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">7</td>
+                                            <td class="text-table w-[20%]">15-07-2025</td>
+                                            <td class="text-table">Pembangunan jalan desa</td>
+                                            <td class="text-table w-[28%]">Rp. 5.000.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">8</td>
+                                            <td class="text-table w-[20%]">30-08-2025</td>
+                                            <td class="text-table">Pengadaan air bersih</td>
+                                            <td class="text-table w-[28%]">Rp. 2.800.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">9</td>
+                                            <td class="text-table w-[20%]">12-09-2025</td>
+                                            <td class="text-table">Peningkatan layanan kesehatan</td>
+                                            <td class="text-table w-[28%]">Rp. 3.200.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">10</td>
+                                            <td class="text-table w-[20%]">05-10-2025</td>
+                                            <td class="text-table">Pengembangan usaha mikro</td>
+                                            <td class="text-table w-[28%]">Rp. 1.500.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">11</td>
+                                            <td class="text-table w-[20%]">20-11-2025</td>
+                                            <td class="text-table">Pembangunan fasilitas olahraga</td>
+                                            <td class="text-table w-[28%]">Rp. 2.700.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">12</td>
+                                            <td class="text-table w-[20%]">10-12-2025</td>
+                                            <td class="text-table">Pengadaan alat komunikasi</td>
+                                            <td class="text-table w-[28%]">Rp. 1.000.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">13</td>
+                                            <td class="text-table w-[20%]">22-12-2025</td>
+                                            <td class="text-table">Peningkatan keamanan desa</td>
+                                            <td class="text-table w-[28%]">Rp. 1.800.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">14</td>
+                                            <td class="text-table w-[20%]">28-12-2025</td>
+                                            <td class="text-table">Pengadaan bibit tanaman</td>
+                                            <td class="text-table w-[28%]">Rp. 900.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">15</td>
+                                            <td class="text-table w-[20%]">31-12-2025</td>
+                                            <td class="text-table">Pembangunan tempat ibadah</td>
+                                            <td class="text-table w-[28%]">Rp. 4.500.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-table text-center w-[9%]">16</td>
+                                            <td class="text-table w-[20%]">-</td>
+                                            <td class="text-table">Lainya</td>
+                                            <td class="text-table w-[28%]">Rp. 42.500.000.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : ALOKASI END -->
+
+        <!-- FOOTER START -->
+        <footer class="bg-[url(/img/bg-profil.png)] w-full bg-cover bg-fixed">
+            <!-- footer container -->
+            <div class="container mx-auto pt-16 lg:pt-24 px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                <div class="container mx-auto bg-sky-500 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
+                    <!-- flex while display md -->
+                    <div class="md:flex md:flex-row">
+                        <!-- flex between addreess and contact -->
+                        <div class="flex flex-col md:w-[70%] lg:w-[55%] xl:w-[70%]">
+                            <!-- Address -->
+                            <div class="flex mx-6 pt-6 mb-4">
+                                <div class="w-[60%] md:w-[50%] lg:w-[40%] xl:w-[25%] xl:mr-8 mr-4 mt-2">
+                                    <img src="img/logo.jpeg" class="rounded-full" />
+                                </div>
+                                <div class="flex flex-col">
+                                    <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-1">Pemerintah Desa Konoha</h2>
+                                    <p class="xl:w-[70%] font-light xl:font-normal text-xs lg:text-base text-white">
+                                        Jl. Perdamaian 3 No.666, Desa Konoha, Kecamatan Fracture, Kabupaten Ascent, Provinsi Icebox
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Contact -->
+                            <div class="mx-6 pt-5 mb-4">
+                                <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-4">Hubungi Kami</h2>
+                                <div class="flex flex-row items-center gap-3 ml-2 mb-4">
+                                    <i class="fa-solid fa-phone text-white text-sm lg:text-base xl:text-xl"></i>
+                                    <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">+62 8966677788</h3>
+                                </div>
+                                <div class="flex flex-row items-center gap-3 ml-2 mb-6">
+                                    <i class="fa-solid fa-envelope text-white text-sm lg:text-base xl:text-xl"></i>
+                                    <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">
+                                        konoha@konoha.com
+                                    </h3>
+                                </div>
+                                <div class="flex flex-row items-center gap-3 lg:gap-5 ml-2">
+                                    <a href="">
+                                        <img src="icon/instagram.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/youtube.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/x.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/facebook.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/tiktok.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Menu -->
+                        <div class="mx-6 pt-5 mb-4 md:w-[30%] lg:w-[35%] xl:2-[30%]">
+                            <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-3 lg:mb-5">Menu Utama</h2>
+                            <div class="flex flex-col gap-4 text-white font-light xl:font-normal text-xs lg:text-base ml-2">
+                                <li>
+                                    <a href="#beranda" onclick="moveToBeranda()">Beranda</a>
+                                </li>
+                                <li>
+                                    <a href="#pengaduan" onclick="moveToPengaduan()">Pengaduan</a>
+                                </li>
+                                <li>
+                                    <a href="#berita" onclick="moveToBerita()">Berita dan Informasi</a>
+                                </li>
+                                <li>
+                                    <a href="#profil" onclick="moveToProfil()">Profil Desa Konoha</a>
+                                </li>
+                                <li>
+                                    <a href="keuangan.html">Keuangan</a>
+                                </li>
+                                <li>
+                                    <a href="">Demografi</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3 lg:pt-5 pb-4 lg:bt-5">
+                    <h4 class="text-slate-700 text-xs lg:text-base text-center font-light">copyright 2025 Pemerintah Desa Konoha</h4>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+        <!-- javascrip sources -->
+        <script src="https://kit.fontawesome.com/9b8f32c598.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+        <script src="js/wow.min.js"></script>
+        <script src="js/keuangan.js"></script>
+        <script src="js/chart.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>

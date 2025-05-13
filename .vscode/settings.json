@@ -1,5 +1,6 @@
 {
     "prettier.bracketSameLine": true,
     "prettier.bracketSpacing": false,
-    "livePreview.defaultPreviewPath": "/index.html"
+    "livePreview.defaultPreviewPath": "/index.html",
+    "prettier.htmlWhitespaceSensitivity": "ignore"
 }

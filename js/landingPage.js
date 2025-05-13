@@ -40,7 +40,7 @@ if (hamburger) {
             }, 700);
         }
     });
-};
+}
 
 // ketika klik diluar hamburger dan navbar maka hamburger tertutup
 document.addEventListener('click', function (e) {
@@ -108,7 +108,7 @@ function category(kategori) {
     iconDropdown.style.transform = 'rotate(0deg)';
     iconDropdown.style.opacity = '30%';
     iconDropdown.style.transition = 'transform 0.5s ease-in-out';
-};
+}
 
 // nomor telepon hanya bisa diisi angka
 function onlyNumeric(event) {
@@ -128,12 +128,12 @@ function moveToBeranda() {
     });
 
     nav.style.transform = 'translateX(100%)';
-    nav.style.transition = 'transform 0.7s ease-in-out';    
+    nav.style.transition = 'transform 0.7s ease-in-out';
     hamburger.classList.remove('hamburger-active');
     setTimeout(() => {
         nav.classList.add('hidden');
     }, 700);
-};
+}
 
 // pindah halaman ke pengaduan
 function moveToPengaduan() {
@@ -163,7 +163,7 @@ function moveToBerita() {
     });
 
     nav.style.transform = 'translateX(100%)';
-    nav.style.transition = 'transform 0.7s ease-in-out';    
+    nav.style.transition = 'transform 0.7s ease-in-out';
     hamburger.classList.remove('hamburger-active');
     setTimeout(() => {
         nav.classList.add('hidden');
@@ -201,4 +201,3 @@ function moveToProfil() {
 //         }, 500);
 //     });
 // };
-

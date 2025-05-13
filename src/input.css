@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import 'animate.css';
@@ -34,32 +34,32 @@ body {
 }
 
 .nav-fix {
-    @apply bg-white/70 fixed z-[999] shadow-sm backdrop-blur-md text-sky-500 
-    transition-all duration-300 ease-in-out; 
+    @apply bg-white/50 fixed z-[999] shadow-sm backdrop-blur-sm text-sky-500 
+    transition-all duration-300 ease-in-out;
 }
 
 .label-lg {
-    @apply lg:text-base
+    @apply lg:text-base;
 }
 
 .input-lg {
-    @apply lg:h-10 lg:rounded-2xl lg:text-base
+    @apply lg:h-10 lg:rounded-2xl lg:text-base;
 }
 
 .swiper {
-    @apply w-[21rem] md:w-[84%] lg:w-[75%] xl:w-[63%] 
+    @apply px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl;
 }
 
 .swiper-wrapper {
-    @apply mb-8
+    @apply mb-8;
 }
 
 .swiper-pagination-bullet {
-  @apply bg-slate-700; 
+    @apply bg-slate-700;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-sky-500; 
+    @apply bg-sky-500;
 }
 
 .dropdown-style {
@@ -67,30 +67,38 @@ body {
     hover:text-sky-500 transition-all duration-500;
 }
 
-.nav-hamburger-style{
-    @apply text-slate-700 font-medium hover:text-sky-500 hover:transition-all duration-500
+.nav-hamburger-style {
+    @apply text-slate-700 font-medium hover:text-sky-500 hover:transition-all duration-500;
 }
 
 .nav-bar-style {
-    @apply text-slate-700 font-normal hover:text-sky-400 transition-all duration-500 
+    @apply text-slate-700 font-normal hover:text-sky-400 transition-all duration-500;
 }
 
 .section-title {
-    @apply pt-18 lg:pt-28 pb-12 lg:pb-18 text-center text-xl lg:text-3xl font-medium
+    @apply pt-18 lg:pt-28 pb-12 lg:pb-18 text-center text-xl lg:text-3xl font-medium;
 }
 
 .fade-out {
     opacity: 0;
     transition: opacity 0.7s ease-in-out;
-  }
+}
 
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.7s ease-in-out forwards;
 }
 
+.text-table {
+    @apply px-4 md:px-6 py-4 text-xs md:text-sm xl:text-base text-slate-700;
+}
+
+.header-table {
+    @apply px-6 py-4 text-left text-sm xl:text-base font-medium text-gray-700;
+}
+
 @keyframes fadeIn {
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
