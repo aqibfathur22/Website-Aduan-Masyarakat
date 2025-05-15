@@ -24,12 +24,14 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-2xs: 18rem;
     --container-xs: 20rem;
     --container-sm: 24rem;
     --container-md: 28rem;
     --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
+    --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-6xl: 72rem;
     --text-xs: 0.75rem;
@@ -352,12 +354,6 @@
   .table {
     display: table;
   }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
-  .h-1\/6 {
-    height: calc(1/6 * 100%);
-  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -373,29 +369,11 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
-  .h-28 {
-    height: calc(var(--spacing) * 28);
-  }
-  .h-32 {
-    height: calc(var(--spacing) * 32);
-  }
-  .h-40 {
-    height: calc(var(--spacing) * 40);
-  }
   .h-44 {
     height: calc(var(--spacing) * 44);
   }
   .h-52 {
     height: calc(var(--spacing) * 52);
-  }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
-  }
-  .h-80 {
-    height: calc(var(--spacing) * 80);
   }
   .h-96 {
     height: calc(var(--spacing) * 96);
@@ -448,6 +426,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-2xs {
+    max-width: var(--container-2xs);
+  }
   .max-w-sm {
     max-width: var(--container-sm);
   }
@@ -473,18 +454,6 @@
     --tw-scale-x: 90%;
     --tw-scale-y: 90%;
     --tw-scale-z: 90%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-110 {
-    --tw-scale-x: 110%;
-    --tw-scale-y: 110%;
-    --tw-scale-z: 110%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-115 {
-    --tw-scale-x: 115%;
-    --tw-scale-y: 115%;
-    --tw-scale-z: 115%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .transform {
@@ -630,8 +599,8 @@
   .bg-\[url\(\/img\/assets\/bg-profil\.png\)\] {
     background-image: url(/img/assets/bg-profil.png);
   }
-  .bg-\[url\(\/img\/assets\/konoha\.jpg\)\] {
-    background-image: url(/img/assets/konoha.jpg);
+  .bg-\[url\(assets\/bg-profil\.png\)\] {
+    background-image: url(assets/bg-profil.png);
   }
   .bg-cover {
     background-size: cover;
@@ -639,23 +608,11 @@
   .bg-fixed {
     background-attachment: fixed;
   }
-  .bg-bottom {
-    background-position: bottom;
-  }
-  .bg-no-repeat {
-    background-repeat: no-repeat;
-  }
   .object-contain {
     object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
-  }
-  .object-bottom {
-    object-position: bottom;
-  }
-  .object-center {
-    object-position: center;
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -747,17 +704,11 @@
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
-  .pb-12 {
-    padding-bottom: calc(var(--spacing) * 12);
-  }
   .pb-24 {
     padding-bottom: calc(var(--spacing) * 24);
   }
   .pb-44 {
     padding-bottom: calc(var(--spacing) * 44);
-  }
-  .pb-120 {
-    padding-bottom: calc(var(--spacing) * 120);
   }
   .text-center {
     text-align: center;
@@ -982,16 +933,6 @@
       }
     }
   }
-  .hover\:scale-120 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 120%;
-        --tw-scale-y: 120%;
-        --tw-scale-z: 120%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
   .hover\:bg-sky-600 {
     &:hover {
       @media (hover: hover) {
@@ -1039,11 +980,6 @@
   .md\:h-36 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 36);
-    }
-  }
-  .md\:h-40 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 40);
     }
   }
   .md\:w-\[30\%\] {
@@ -1181,16 +1117,6 @@
       height: calc(var(--spacing) * 24);
     }
   }
-  .lg\:h-44 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 44);
-    }
-  }
-  .lg\:h-48 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 48);
-    }
-  }
   .lg\:h-56 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 56);
@@ -1246,6 +1172,11 @@
       width: 75%;
     }
   }
+  .lg\:max-w-2xl {
+    @media (width >= 64rem) {
+      max-width: var(--container-2xl);
+    }
+  }
   .lg\:max-w-4xl {
     @media (width >= 64rem) {
       max-width: var(--container-4xl);
@@ -1259,6 +1190,16 @@
   .lg\:max-w-lg {
     @media (width >= 64rem) {
       max-width: var(--container-lg);
+    }
+  }
+  .lg\:max-w-md {
+    @media (width >= 64rem) {
+      max-width: var(--container-md);
+    }
+  }
+  .lg\:max-w-xl {
+    @media (width >= 64rem) {
+      max-width: var(--container-xl);
     }
   }
   .lg\:max-w-xs {
@@ -1483,6 +1424,11 @@
   .xl\:max-w-2xl {
     @media (width >= 80rem) {
       max-width: var(--container-2xl);
+    }
+  }
+  .xl\:max-w-3xl {
+    @media (width >= 80rem) {
+      max-width: var(--container-3xl);
     }
   }
   .xl\:max-w-6xl {
@@ -5380,6 +5326,16 @@ body {
   to {
     opacity: 1;
   }
+}
+.bg-hero {
+  background-image: url('assets/konoha.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.bg-footer {
+  background-image: url('assets/footer.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 @property --tw-scale-x {
   syntax: "*";

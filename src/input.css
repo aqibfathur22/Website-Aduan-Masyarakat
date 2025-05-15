@@ -101,3 +101,15 @@ body {
         opacity: 1;
     }
 }
+
+.bg-hero {
+    background-image: url('assets/konoha.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.bg-footer {
+    background-image: url('assets/footer.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
