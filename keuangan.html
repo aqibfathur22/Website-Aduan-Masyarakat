@@ -48,7 +48,7 @@
                                 <a href="keuangan.html" class="nav-hamburger-style">Keuangan</a>
                             </li>
                             <li class="group">
-                                <a href="" class="nav-hamburger-style">Demografi</a>
+                                <a href="demografi.html" class="nav-hamburger-style">Demografi</a>
                             </li>
                         </ul>
                     </nav>
@@ -65,10 +65,10 @@
                                 <a href="#profil" onclick="moveToProfil()" class="nav-bar-style">Profil</a>
                             </li>
                             <li class="group">
-                                <a href="" class="nav-bar-style">Keuangan</a>
+                                <a href="keuangan.html" class="nav-bar-style">Keuangan</a>
                             </li>
                             <li class="group">
-                                <a href="" class="nav-bar-style">Demografi</a>
+                                <a href="demografi.html" class="nav-bar-style">Demografi</a>
                             </li>
                         </ul>
                     </nav>
@@ -87,22 +87,22 @@
                         <h1 class="text-center section-title text-sky-500">Keuangan Desa Konoha</h1>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-6 lg:justify-center">
+                    <div class="flex flex-col lg:flex-row gap-6 lg:justify-between">
                         <div
-                            class="container my-auto mx-auto lg:mx-0 lg:block max-w-xs md:max-w-sm lg:max-w- xl:max-w-xl wow animate__animated animate__fadeInUp"
+                            class="container my-auto mx-auto lg:mx-0 lg:block max-w-xs md:max-w-sm lg:max-w-xs xl:max-w-md wow animate__animated animate__fadeInUp"
                             data-wow-duration="1.5s">
-                            <img src="img/grafik.png" class="object-contain w-full opacity-75" />
+                            <img src="img/assets/grafik.png" class="object-contain w-full opacity-75" />
                         </div>
 
                         <div
-                            class="flex flex-col gap-6 px-6 lg:px-14 py-8 lg:py-10 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full lg:max-w-lg xl:max-w-2xl wow animate__animated animate__fadeInUp"
+                            class="flex flex-col gap-6 px-6 lg:px-14 py-8 lg:py-10 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full w-full lg:max-w-lg xl:max-w-2xl wow animate__animated animate__fadeInUp"
                             data-wow-duration="1.5s"
                             data-wow-delay="400ms">
                             <div class="mb-2">
                                 <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Keuangan Desa Konoha Tahun 2025</h3>
                             </div>
                             <!-- income -->
-                            <div class="flex gap-4 justify-center">
+                            <div class="flex gap-4 xl:gap-10 justify-center">
                                 <!-- income icon -->
                                 <div class="hidden md:block">
                                     <img src="icon/up.svg" class="w-[80%] xl:w-[90%] pt-2" />
@@ -121,7 +121,7 @@
                             </div>
 
                             <!-- outcome -->
-                            <div class="flex gap-4 justify-center">
+                            <div class="flex gap-4 xl:gap-10 justify-center">
                                 <!-- outcome icon -->
                                 <div class="hidden md:block">
                                     <img src="icon/down.svg" class="w-[80%] xl:w-[90%] pt-2" />
@@ -140,7 +140,7 @@
                             </div>
 
                             <!-- surplus/defisit -->
-                            <div class="flex gap-[6.5rem] lg:gap-15 justify-center">
+                            <div class="flex gap-[6.5rem] lg:gap-15 xl:gap-28 justify-center">
                                 <!-- outcome fake box -->
                                 <div class="hidden md:block"></div>
                                 <div class="flex flex-col gap-4">
@@ -148,12 +148,12 @@
                                         <h3 class="text-slate-700 font-semibold text-sm lg:text-base">Surplus / Defisit</h3>
                                     </div>
                                     <!-- outcome grid -->
-                                    <div class="grid grid-cols-2 gap-6 md:gap-4 lg:gap-8 xl:gap-14">
-                                        <div class="w-44 flex flex-col gap-2">
+                                    <div class="grid grid-cols-2 gap-6 md:gap-4 lg:gap-8 xl:gap-10">
+                                        <div class="w-48 flex flex-col gap-2">
                                             <h5 class="text-slate-700 text-sm xl:text-base">Pengeluaran Desa</h5>
                                             <h5 class="text-sky-500 text-base xl:text-lg font-medium">+ Rp. 52.230.492.666</h5>
                                         </div>
-                                        <div class="w-44 flex flex-col gap-2">
+                                        <div class="w-48 flex flex-col gap-2">
                                             <h5 class="text-slate-700 text-sm xl:text-base">Dana Mandiri</h5>
                                             <h5 class="text-slate-700 text-base xl:text-lg font-medium">Rp. 0</h5>
                                         </div>
@@ -177,7 +177,7 @@
             <!-- pendapatan background -->
             <div class="bg-white">
                 <!-- chart container -->
-                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-10 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-10 xl:pt-20 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
                     <div
                         class="flex flex-col gap-10 px-6 lg:px-20 py-8 lg:py-14 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
                         data-wow-duration="1.5s"
@@ -352,18 +352,18 @@
         <!-- SECTION : ALOKASI END -->
 
         <!-- FOOTER START -->
-        <footer class="bg-[url(/img/bg-profil.png)] w-full bg-cover bg-fixed">
+        <footer class="bg-[url(/img/assets/bg-profil.png)] w-full bg-cover bg-fixed">
             <!-- footer container -->
             <div class="container mx-auto pt-16 lg:pt-24 px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
-                <div class="container mx-auto bg-sky-500 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
+                <div class="bg-sky-500 lg:px-10 xl:px-20 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
                     <!-- flex while display md -->
-                    <div class="md:flex md:flex-row">
+                    <div class="md:flex md:flex-row lg:gap-20">
                         <!-- flex between addreess and contact -->
                         <div class="flex flex-col md:w-[70%] lg:w-[55%] xl:w-[70%]">
                             <!-- Address -->
                             <div class="flex mx-6 pt-6 mb-4">
                                 <div class="w-[60%] md:w-[50%] lg:w-[40%] xl:w-[25%] xl:mr-8 mr-4 mt-2">
-                                    <img src="img/logo.jpeg" class="rounded-full" />
+                                    <img src="img/assets/logo.jpeg" class="rounded-full" />
                                 </div>
                                 <div class="flex flex-col">
                                     <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-1">Pemerintah Desa Konoha</h2>
@@ -424,7 +424,7 @@
                                     <a href="keuangan.html">Keuangan</a>
                                 </li>
                                 <li>
-                                    <a href="">Demografi</a>
+                                    <a href="demografi.html">Demografi</a>
                                 </li>
                             </div>
                         </div>
@@ -443,9 +443,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 
+        <script src="js/hamburger.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/keuangan.js"></script>
-        <script src="js/chart.js"></script>
+        <script src="js/keuanganChart.js"></script>
         <script>
             new WOW().init();
         </script>

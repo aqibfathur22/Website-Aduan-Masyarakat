@@ -48,7 +48,7 @@
                                 <a href="keuangan.html" class="nav-hamburger-style">Keuangan</a>
                             </li>
                             <li class="group">
-                                <a href="" class="nav-hamburger-style">Demografi</a>
+                                <a href="demografi.html" class="nav-hamburger-style">Demografi</a>
                             </li>
                         </ul>
                     </nav>
@@ -68,7 +68,7 @@
                                 <a href="keuangan.html" class="nav-bar-style">Keuangan</a>
                             </li>
                             <li class="group">
-                                <a href="" class="nav-bar-style">Demografi</a>
+                                <a href="demografi.html" class="nav-bar-style">Demografi</a>
                             </li>
                         </ul>
                     </nav>
@@ -80,7 +80,7 @@
         <!-- SECTION : HERO START -->
         <section id="beranda">
             <!-- hero background image -->
-            <div class="bg-[url(/img/konoha.jpg)] bottom-24 bg-cover h-[40rem] lg:h-[44rem] xl:h-[54rem] bg-bottom bg-no-repeat">
+            <div class="bg-[url(/img/assets/konoha.jpg)] bottom-24 bg-cover h-[40rem] lg:h-[44rem] xl:h-[54rem] bg-bottom bg-no-repeat">
                 <!-- hero container -->
                 <div class="container mx-auto pb-44 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
                     <!-- text container -->
@@ -225,7 +225,7 @@
                                 data-wow-delay="600ms">
                                 <button
                                     type="submit"
-                                    class="w-full h-9 px-6 mt-2 bg-sky-500 text-white text-sm rounded-xl hover:bg-sky-600 hover:transition-all hover:duration-500 not-hover:duration-500 input-lg">
+                                    class="w-full h-9 px-6 mt-2 bg-sky-500 text-white text-sm rounded-xl hover:bg-sky-600 transition-all duration-500 ease-in-out cursor-pointer input-lg">
                                     Kirim Aduanmu!
                                 </button>
                             </div>
@@ -249,19 +249,21 @@
                         <!-- slide 1 -->
                         <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/berita.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/berita/berita.png"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Mantan Kepala Desa Konoha Diduga Telah Melakukan Korupsi Selama Masa Pemerintahanya
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
@@ -270,19 +272,21 @@
                         <!-- slide 2 -->
                         <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/berita.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/berita/berita2.png"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Jembatan Baru di Desa Konoha Belum Ada Satu Bulan Sudah Rubuh!
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
@@ -291,19 +295,21 @@
                         <!-- slide 3 -->
                         <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/berita.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/berita/berita3.jpg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Balapan Bergengsi, Formula 1 Sukses Digelar di Desa Konoha
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
@@ -312,19 +318,21 @@
                         <!-- slide 4 -->
                         <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/berita.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/berita/berita4.jpg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Kegiatan Gotong Royong Warga Desa Konoha Membangun Jembatan Baru
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
@@ -337,84 +345,92 @@
                 <div class="swiper container mx-auto max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
                     <div class="swiper-wrapper mb-1">
                         <!-- slide 1 -->
-                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="200">
+                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/informasi.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/informasi/informasi.jpg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Objek Wisata Danau Satu di Desa Konoha!
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- slide 2 -->
-                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="200">
+                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/informasi.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/informasi/informasi2.jpg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Melihat Keindahan Alam Desa Konoha Yang Sangat Ciamik!
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- slide 3 -->
-                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="200">
+                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/informasi.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/informasi/informasi3.jpg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Pemerintah Desa Konoha Meresmikan Bitcoin Sebagai Alat Pembayaran Resmi!
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- slide 4 -->
-                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="200">
+                        <div class="swiper-slide wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-offset="300">
                             <div class="group overflow-hidden bg-white rounded-xl hover:scale-95 transition-all duration-500">
-                                <a href="">
-                                    <div class="overflow-hidden">
+                                <a href="berita.html" onclick="moveToBeritaPreview()">
+                                    <div class="overflow-hidden h-44 md:h-36 lg:h-56 xl:h-44">
                                         <!-- source image -->
                                         <img
-                                            src="img/informasi.png"
-                                            class="w-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
+                                            src="img/informasi/informasi4.jpeg"
+                                            class="w-full h-full object-cover hover:scale-110 transition-all duration-500 ease-in-out" />
                                     </div>
-                                    <div class="mt-2 px-4 pb-4">
-                                        <h2 class="text-sm font-medium mb-1">Lorem ipsum dolor sit amet.</h2>
-                                        <h3 class="text-sm text-gray-600">
-                                            <i class="fa-regular fa-clock"></i>
+                                    <div class="mt-2 px-4 pb-4 flex flex-col h-20">
+                                        <h2 class="text-sm font-medium mb-1 line-clamp-2 text-ellipsis overflow-hidden">
+                                            Layanan yang Terdapat di Desa Konoha
+                                        </h2>
+                                        <h3 class="text-sm text-gray-600 mt-auto">
+                                            <i class="fa-regular fa-calendar"></i>
                                             <span class="mx-1"></span>
-                                            12 April 2021
+                                            12 April 2021 10.00
                                         </h3>
                                     </div>
                                 </a>
@@ -428,7 +444,7 @@
         <!-- SECTION : BERITA END -->
 
         <!-- bg init for profil and foooter -->
-        <section class="bg-[url(/img/bg-profil.png)] w-full bg-cover bg-fixed">
+        <section class="bg-[url(/img/assets/bg-profil.png)] w-full bg-cover bg-fixed">
             <!-- SECTION : PROFIL START -->
             <section id="profil">
                 <div>
@@ -440,13 +456,13 @@
 
                             <div class="lg:flex lg:flex-row lg:gap-16">
                                 <div
-                                    class="group overflow-hidden lg:w-1/2 mb-12 rounded-xl hover:scale-95 transition-all duration-500 ease-in-out wow animate__animated animate__fadeInLeft"
+                                    class="group overflow-hidden h-96 lg:w-1/2 mb-12 rounded-xl hover:scale-95 transition-all duration-500 ease-in-out wow animate__animated animate__fadeInLeft"
                                     data-wow-duration="1.5s"
                                     data-wow-delay="0ms"
                                     data-wow-offset="300">
                                     <img
-                                        src="img/profil.png"
-                                        class="mx-auto w-full object-cover rounded-xl hover:scale-110 transition-all duration-500 ease-in-out" />
+                                        src="img/profil/profil.jpeg"
+                                        class="mx-auto object-cover w-full h-full rounded-xl hover:scale-110 transition-all duration-500 ease-in-out" />
                                 </div>
                                 <div
                                     class="lg:w-1/2 wow animate__animated animate__fadeInRight"
@@ -472,15 +488,15 @@
             <!-- FOOTER START -->
             <footer>
                 <div class="container mx-auto px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
-                    <div class="container mx-auto bg-sky-500 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
+                    <div class="bg-sky-500 lg:px-10 xl:px-20 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
                         <!-- flex while display md -->
-                        <div class="md:flex md:flex-row">
+                        <div class="md:flex md:flex-row lg:gap-20">
                             <!-- flex between addreess and contact -->
                             <div class="flex flex-col md:w-[70%] lg:w-[55%] xl:w-[70%]">
                                 <!-- Address -->
                                 <div class="flex mx-6 pt-6 mb-4">
                                     <div class="w-[60%] md:w-[50%] lg:w-[40%] xl:w-[25%] xl:mr-8 mr-4 mt-2">
-                                        <img src="img/logo.jpeg" class="rounded-full" />
+                                        <img src="img/assets/logo.jpeg" class="rounded-full" />
                                     </div>
                                     <div class="flex flex-col">
                                         <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-1">
@@ -545,7 +561,7 @@
                                         <a href="keuangan.html">Keuangan</a>
                                     </li>
                                     <li>
-                                        <a href="">Demografi</a>
+                                        <a href="demografi.html">Demografi</a>
                                     </li>
                                 </div>
                             </div>
@@ -565,9 +581,11 @@
         <script src="https://kit.fontawesome.com/9b8f32c598.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
+        <script src="js/hamburger.js"></script>
         <script src="js/landingPage.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/wow.min.js"></script>
+
         <script>
             new WOW().init();
         </script>

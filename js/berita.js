@@ -26,6 +26,7 @@ function moveToPengaduan() {
     header.style.transition = 'background-color 0.5s ease-in-out';
 }
 
+// pindah halaman ke berita
 function moveToBerita() {
     event.preventDefault();
 
@@ -48,6 +49,7 @@ function moveToBerita() {
     header.style.transition = 'background-color 0.5s ease-in-out';
 }
 
+// pindah halaman ke profil
 function moveToProfil() {
     event.preventDefault();
 

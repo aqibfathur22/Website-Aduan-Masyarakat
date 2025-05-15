@@ -1,4 +1,5 @@
 const pendapatanCtx = document.getElementById('pendapatanChart');
+const anggaranCtx = document.getElementById('anggaranChart');
 
 new Chart(pendapatanCtx, {
     type: 'bar',
@@ -53,8 +54,6 @@ new Chart(pendapatanCtx, {
         },
     },
 });
-
-const anggaranCtx = document.getElementById('anggaranChart');
 
 new Chart(anggaranCtx, {
     type: 'bar',

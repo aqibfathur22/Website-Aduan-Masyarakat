@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <link href="./src/output.css" rel="stylesheet" />
+    </head>
+    <body class="fade-in">
+        <!-- HEADER START -->
+        <header
+            class="absolute h-18 lg:h-20 z-50 py-5 w-full text-sky-600 bg-white/20 backdrop-blur-sm duration-700 ease-in-out wow animate__animated animate__fadeInDown"
+            data-wow-duration="1.5s">
+            <!-- header container -->
+            <div class="container mx-auto px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                <!-- header flexbox -->
+                <div class="flex justify-between items-center relative">
+                    <!-- header logo -->
+                    <div class="my-auto">
+                        <a href="#beranda" onclick="moveToBeranda()" class="text-2xl lg:text-3xl font-semibold">Konoha.</a>
+                    </div>
+                    <!-- hamburger menu -->
+                    <div class="flex items-center lg:w-72">
+                        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                            <span class="hamburger-menu origin-top-left transition-all ease-in-out duration-500"></span>
+                            <span class="hamburger-menu transition-all ease-in-out duration-300"></span>
+                            <span class="hamburger-menu origin-bottom-left transition-all ease-in-out duration-500"></span>
+                        </button>
+                    </div>
+                    <!-- navigation menu hamburger -->
+                    <nav
+                        id="nav-menu"
+                        class="hidden lg:hidden absolute bg-white/90 bg-cover shadow-2xl w-70 top-16 p-10 rounded-2xl -right-[8%]">
+                        <ul class="flex flex-col gap-8 font-medium text-lg">
+                            <li class="group">
+                                <a href="#pengaduan" onclick="moveToPengaduan()" class="nav-hamburger-style">Pengaduan</a>
+                            </li>
+                            <li class="group">
+                                <a href="#berita" onclick="moveToBerita()" class="nav-hamburger-style">Berita</a>
+                            </li>
+                            <li class="group">
+                                <a href="#profil" onclick="moveToProfil()" class="nav-hamburger-style">Profil</a>
+                            </li>
+                            <li class="group">
+                                <a href="keuangan.html" class="nav-hamburger-style">Keuangan</a>
+                            </li>
+                            <li class="group">
+                                <a href="demografi.html" class="nav-hamburger-style">Demografi</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- navigation menu bar -->
+                    <nav class="hidden lg:block lg:static lg:py-2">
+                        <ul class="flex flex-row gap-10 font-medium text-lg">
+                            <li class="group">
+                                <a href="#pengaduan" onclick="moveToPengaduan()" class="nav-bar-style">Pengaduan</a>
+                            </li>
+                            <li class="group">
+                                <a href="#berita" onclick="moveToBerita()" class="nav-bar-style">Berita</a>
+                            </li>
+                            <li class="group">
+                                <a href="#profil" onclick="moveToProfil()" class="nav-bar-style">Profil</a>
+                            </li>
+                            <li class="group">
+                                <a href="keuangan.html" class="nav-bar-style">Keuangan</a>
+                            </li>
+                            <li class="group">
+                                <a href="demografi.html" class="nav-bar-style">Demografi</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+
+        <!-- SECTION : HERO START -->
+        <section>
+            <!-- hero background -->
+            <div class="bg-white">
+                <!-- hero container -->
+                <div class="container mx-auto px-2 pt-12 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div>
+                        <h1 class="text-center section-title text-sky-500">Demografi Desa Konoha</h1>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-6 justify-center lg:justify-between">
+                        <div
+                            class="flex justify-center wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1.5s"
+                            data-wow-offset="300">
+                            <canvas id="kelaminChart" class="max-w-xs md:max-w-sm lg:max-w-xs xl:max-w-sm"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col gap-10 xl:max-w-2xl px-6 md:px-20 lg:px-16 xl:px-20 py-8 md:py-12 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1.5s"
+                            data-wow-offset="300"
+                            data-wow-delay="400ms">
+                            <div>
+                                <h2 class="text-slate-700 text-center font-medium text-base xl:text-lg">
+                                    Jumlah Penduduk Desa Konoha 2025
+                                </h2>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-2 md:gap-x-16 xl:gap-x-24 gap-y-4 xl:gap-y-8">
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Jumlah Penduduk</h3>
+                                    <h2 class="text-slate-700 text-base xl:text-lg font-semibold">52.000 Jiwa</h2>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Jumlah Kepala Keluarga</h3>
+                                    <h2 class="text-slate-700 text-base xl:text-lg font-semibold">10.200 Jiwa</h2>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Penduduk Laki-laki</h3>
+                                    <h2 class="text-sky-500 text-base xl:text-lg font-semibold">30.000 Jiwa</h2>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Penduduk Perempuan</h3>
+                                    <h2 class="text-pink-500 text-base xl:text-lg font-semibold">22.000 Jiwa</h2>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Jumlah Kelahiran</h3>
+                                    <h2 class="text-slate-700 text-base xl:text-lg font-semibold">1600 Jiwa</h2>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-slate-700 text-xs xl:text-base">Jumlah Kematian</h3>
+                                    <h2 class="text-slate-700 text-base xl:text-lg font-semibold">1000 Jiwa</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : HERO END -->
+
+        <!-- SECTION : PENDIDIKAN START -->
+        <section>
+            <!-- pendidikan background -->
+            <div class="bg-white">
+                <!-- chart container -->
+                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-10 xl:pt-20 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div
+                        class="flex flex-col gap-10 px-6 lg:px-20 py-8 lg:py-14 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-offset="300"
+                        data-wow-delay="100ms">
+                        <div>
+                            <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Pendapatan Desa Konoha Tahun 2025</h3>
+                        </div>
+                        <div>
+                            <canvas id="pendidikanChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : PENDIDIKAN END -->
+
+        <!-- SECTION : AGAMA START -->
+        <section>
+            <!-- agama background -->
+            <div class="bg-white">
+                <!-- chart container -->
+                <div class="container mx-auto mb-2 xl:mb-14 px-2 pt-10 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                    <div
+                        class="flex flex-col gap-10 px-6 lg:px-20 py-8 lg:py-14 bg-white shadow-black/20 shadow-md ring-2 ring-slate-200/70 rounded-xl h-full wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-offset="300"
+                        data-wow-delay="100ms">
+                        <div>
+                            <h3 class="text-slate-700 text-center font-medium text-base xl:text-lg">Agama di Desa Konoha Tahun 2025</h3>
+                        </div>
+                        <div>
+                            <canvas id="agamaChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION : AGAMA END -->
+
+        <!-- FOOTER START -->
+        <footer class="bg-[url(/img/assets/bg-profil.png)] w-full bg-cover bg-fixed">
+            <!-- footer container -->
+            <div class="container mx-auto pt-16 lg:pt-24 px-2 max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+                <div class="bg-sky-500 lg:px-10 xl:px-20 pt-2 lg:pt-4 xl:pt-8 pb-6 lg:pb-8 xl:pb-12 rounded-xl">
+                    <!-- flex while display md -->
+                    <div class="md:flex md:flex-row lg:gap-20">
+                        <!-- flex between addreess and contact -->
+                        <div class="flex flex-col md:w-[70%] lg:w-[55%] xl:w-[70%]">
+                            <!-- Address -->
+                            <div class="flex mx-6 pt-6 mb-4">
+                                <div class="w-[60%] md:w-[50%] lg:w-[40%] xl:w-[25%] xl:mr-8 mr-4 mt-2">
+                                    <img src="img/assets/logo.jpeg" class="rounded-full" />
+                                </div>
+                                <div class="flex flex-col">
+                                    <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-1">Pemerintah Desa Konoha</h2>
+                                    <p class="xl:w-[70%] font-light xl:font-normal text-xs lg:text-base text-white">
+                                        Jl. Perdamaian 3 No.666, Desa Konoha, Kecamatan Fracture, Kabupaten Ascent, Provinsi Icebox
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Contact -->
+                            <div class="mx-6 pt-5 mb-4">
+                                <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-4">Hubungi Kami</h2>
+                                <div class="flex flex-row items-center gap-3 ml-2 mb-4">
+                                    <i class="fa-solid fa-phone text-white text-sm lg:text-base xl:text-xl"></i>
+                                    <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">+62 8966677788</h3>
+                                </div>
+                                <div class="flex flex-row items-center gap-3 ml-2 mb-6">
+                                    <i class="fa-solid fa-envelope text-white text-sm lg:text-base xl:text-xl"></i>
+                                    <h3 class="text-white font-light xl:font-normal text-xs lg:text-base tracking-wide">
+                                        konoha@konoha.com
+                                    </h3>
+                                </div>
+                                <div class="flex flex-row items-center gap-3 lg:gap-5 ml-2">
+                                    <a href="">
+                                        <img src="icon/instagram.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/youtube.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/x.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/facebook.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                    <a href="">
+                                        <img src="icon/tiktok.svg" class="w-8 lg:w-12" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Menu -->
+                        <div class="mx-6 pt-5 mb-4 md:w-[30%] lg:w-[35%] xl:2-[30%]">
+                            <h2 class="font-normal xl:font-semibold text-sm lg:text-lg text-white mb-3 lg:mb-5">Menu Utama</h2>
+                            <div class="flex flex-col gap-4 text-white font-light xl:font-normal text-xs lg:text-base ml-2">
+                                <li>
+                                    <a href="#beranda" onclick="moveToBeranda()">Beranda</a>
+                                </li>
+                                <li>
+                                    <a href="#pengaduan" onclick="moveToPengaduan()">Pengaduan</a>
+                                </li>
+                                <li>
+                                    <a href="#berita" onclick="moveToBerita()">Berita dan Informasi</a>
+                                </li>
+                                <li>
+                                    <a href="#profil" onclick="moveToProfil()">Profil Desa Konoha</a>
+                                </li>
+                                <li>
+                                    <a href="keuangan.html">Keuangan</a>
+                                </li>
+                                <li>
+                                    <a href="demografi.html">Demografi</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3 lg:pt-5 pb-4 lg:bt-5">
+                    <h4 class="text-slate-700 text-xs lg:text-base text-center font-light">copyright 2025 Pemerintah Desa Konoha</h4>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+        <!-- javascrip sources -->
+        <script src="https://kit.fontawesome.com/9b8f32c598.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+        <script src="js/hamburger.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/demografi.js"></script>
+        <script src="js/demografiChart.js"></script>
+
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>

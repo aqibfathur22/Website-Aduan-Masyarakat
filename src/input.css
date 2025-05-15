@@ -7,12 +7,6 @@
     --font-Poppins: 'Poppins', sans-serif;
 }
 
-@layer utilities {
-    .bg-konoha-mobile {
-        background-image: url(img/konohaMobile.jpg);
-    }
-}
-
 body {
     font-family: var(--font-Poppins);
 }
@@ -95,6 +89,11 @@ body {
 
 .header-table {
     @apply px-6 py-4 text-left text-sm xl:text-base font-medium text-gray-700;
+}
+
+.notfound-svg {
+    fill: #fff;
+    filter: drop-shadow(0px 0px 58px rgba(141, 217, 255, 0.51));
 }
 
 @keyframes fadeIn {
